@@ -1,0 +1,5 @@
+.input_price[type=number]::-webkit-inner-spin-button,
+.input_price[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
