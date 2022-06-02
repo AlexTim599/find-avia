@@ -4,6 +4,10 @@ import { Form } from "react-bootstrap"
 const FiltredAside = () => {
     const filterItem = ['- 1 пересдка', '- без пересадок']
 
+    const HandleClick = (item) => {
+        console.log('click', item);
+    }
+
     return (
         <Form >
             <h6>Фильтровать</h6>
@@ -11,6 +15,7 @@ const FiltredAside = () => {
                 {filterItem.map((item, index) => {
                     return (
                         <Form.Check
+                            onClick={() => HandleClick(item)}
                             key={index}
                             type='checkbox'
                             label={item}

@@ -1,22 +1,20 @@
 import './App.css';
-import SortedAside from './components/SortedAside';
-import FiltredAside from './components/FiltredAside';
-import PriceAside from './components/PriceAside';
-import AirlinesAside from './components/AirlinesAside';
+
 import FlyCards from './components/FlyCards';
 import { Button } from 'react-bootstrap';
+import FilterPanel from './components/FilterPanel'
+import Card from './components/Card';
+import { useSelector } from "react-redux"
 
 function App() {
+  const arrfind = useSelector((state) => state.findAvia.schedule)
+
+
   return (
 
     <div className='container-sm mt-5'>
       <div className="App"  >
-        <div style={{ width: '300px', fontSize: '13px', marginTop: "30px" }}>
-          <SortedAside />
-          <FiltredAside />
-          <PriceAside />
-          <AirlinesAside />
-        </div>
+        < FilterPanel />
         <div className='container-sm'>
           <FlyCards />
           <FlyCards />
@@ -24,6 +22,7 @@ function App() {
             <Button variant="secondary" size="md">Показать еще </Button>
           </div>
         </div>
+        {/* <Card flight={arrfind[0].result.flights} /> */}
 
 
       </div>

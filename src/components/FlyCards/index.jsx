@@ -2,8 +2,15 @@ import { Button, Card } from "react-bootstrap"
 import { ReactComponent as ArrowRight } from '../../images/arrow-right.svg'
 import './style.css'
 
+import { useSelector } from "react-redux"
+
 
 const FlyCards = () => {
+
+
+    const arrfind = useSelector((state) => state.findAvia.schedule)
+    console.log(arrfind[0].result.flights);
+
     return (
         <Card className="border-0">
             <Card.Header className="d-inline-flex justify-content-between align-items-baseline " style={{ backgroundColor: "#0053ff8f", maxHeight: '65px' }}>
