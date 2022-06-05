@@ -1,13 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit'
-import aviaArr from '../../../Json/flights.json'
+import fligthData from '../../../Json/flights.json'
 
 const initialState = {
-    schedule: aviaArr,
+    flights: fligthData[0].result.flights,
 }
 
 
-export const aviaSlice = createSlice({
-    name: 'findAvia',
+export const flightsSlice = createSlice({
+    name: 'flights',
     initialState,
 
     reducers: {
@@ -18,6 +18,6 @@ export const aviaSlice = createSlice({
 })
 
 
-export const { sorted } = aviaSlice.actions
+export const { sorted } = flightsSlice.actions
 
-export default aviaSlice.reducer
+export default flightsSlice.reducer

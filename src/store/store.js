@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
-import aviaSlice from '../components/features/findAvia/findSlise'
+import flightsSlice from '../components/features/findAvia/findSlise'
 
 export const store = configureStore({
     reducer: {
-        findAvia: aviaSlice
+        flights: flightsSlice
 
     },
 })
